@@ -15,9 +15,7 @@ pnpm init
 
 ```json
 {
-  // ...,
   "private": true
-  // ...
 }
 ```
 
@@ -67,7 +65,6 @@ pnpm add -w @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-pl
 ```
 
 ```json
-// .eslintrc.json
 {
   "root": true,
   "parser": "@typescript-eslint/parser",
@@ -89,7 +86,6 @@ touch .prettierrc
 ```
 
 ```json
-// .prettierrc
 {
   "semi": true,
   "singleQuote": true,
@@ -129,14 +125,12 @@ pnpm add typescript --save-dev
 
 ```json
 {
-  // ...,
   "main": "dist/index.js",
   "scripts": {
     "dev": "ts-node-dev src/index.ts",
     "build": "tsc",
     "serve": "node dist/index.js"
   }
-  // ...,
 }
 ```
 
@@ -254,14 +248,12 @@ pnpm add typescript --save-dev
 
 ```json
 {
-  // ...,
   "name": "@pnpm-project/types",
   "main": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
     "dev": "tsc -w"
   }
-  // ...
 }
 ```
 
