@@ -1,0 +1,19 @@
+{
+  "name": "@pnpm-project/types",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc -w"
+  },
+  "keywords": [
+    "typescript",
+    "types"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.4.5"
+  }
+}
