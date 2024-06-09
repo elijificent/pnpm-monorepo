@@ -321,20 +321,26 @@ pnpm add  jest @types/jest ts-jest supertest @types/supertest --save-dev
 ```
 
 For nextjs frontends:
+Adopted from:
+https://nextjs.org/docs/app/building-your-application/testing/jest
 
 ```shell
 pnpm add --filter frontend-client jest jest-environment-jsdom @testing-library/react @testing-library/jest-dom --save-dev
-
+pnpm --filter frontend-client create jest@latest
 ```
 
-.babelrc
+```javascript
+const nextJest = require('next/jest')
 
-```json
-{
-  "presets": ["next/babel"]
+/** @type {import('jest').Config} */
+const createJestConfig = nextJest({
+  dir: './',
+})
+
+const config = {
+  coverageProvider: 'v8',
+  testEnvironment: 'jsdom',
 }
-```
 
-```shell
-pnpm create jest@latest
+module.exports = createJestConfig(config)
 ```
