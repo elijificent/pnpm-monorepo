@@ -1,6 +1,6 @@
 import express, { Request, Response } from 'express';
 import cors from 'cors';
-import { TestRequest, TestResponse } from '@pnpm-project/types';
+import { TestRequest } from '@pnpm-project/types';
 
 const app = express();
 const port = process.env.PORT || 4000;
@@ -18,6 +18,9 @@ app.get('/', (req: Request, res: Response) => {
   res.json(request);
 });
 
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
+const server = app.listen(port, () => {
+  // Running
 });
+
+export default app;
+export { server };

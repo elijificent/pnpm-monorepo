@@ -6,7 +6,8 @@
     "build": "make pnpm-build",
     "lint": "pnpm recursive run lint",
     "lint:fix": "pnpm recursive run lint:fix",
-    "project:format": "prettier --write ."
+    "project:format": "prettier --write .",
+    "test": "pnpm recursive run test"
   },
   "keywords": [
     "pnpm",

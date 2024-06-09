@@ -313,3 +313,24 @@ const request: TestRequest = {
   },
 };
 ```
+
+### Adding tests
+
+```shell
+pnpm add  jest @types/jest ts-jest supertest @types/supertest --save-dev
+```
+
+For nextjs frontends:
+
+```shell
+pnpm add @types/jest @testing-library/react @types/react @types/node ts-jest jest-environment-jsdom --save-dev
+
+```
+
+.babelrc
+
+```json
+{
+  "presets": ["next/babel"]
+}
+```

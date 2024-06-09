@@ -5,10 +5,7 @@ const request: TestRequest = {
     message: 'Hello from the frontend client!',
   },
 };
-console.log(request);
 
 export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24"></main>
-  );
+  return <main>{request.body.message}</main>;
 }
