@@ -1,25 +1,25 @@
-const nextJest = require("next/jest");
+const nextJest = require('next/jest');
 
 /** @type {import('jest').Config} */
 const config = {
-  coverageProvider: "v8",
+  coverageProvider: 'v8',
 
   moduleFileExtensions: [
-    "js",
-    "mjs",
-    "cjs",
-    "jsx",
-    "ts",
-    "tsx",
-    "json",
-    "node"
+    'js',
+    'mjs',
+    'cjs',
+    'jsx',
+    'ts',
+    'tsx',
+    'json',
+    'node',
   ],
 
-  testEnvironment: "jsdom",
+  testEnvironment: 'jsdom',
 };
 
 const createJestConfig = nextJest({
-  dir: "./",
+  dir: './',
 });
 
 module.exports = createJestConfig(config);
