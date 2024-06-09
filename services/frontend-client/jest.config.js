@@ -1,9 +1,25 @@
-module.exports = {
-  preset: 'ts-jest/presets/js-with-babel',
-  testPathIgnorePatterns: ['/node_modules/', '/dist/'],
-  testEnvironment: 'jest-environment-jsdom',
-  setupFilesAfterEnv: ['./jest.setup.js'],
-  transform: {
-    '^.+\\.[tj]sx?$': 'babel-jest',
-  },
+const nextJest = require("next/jest");
+
+/** @type {import('jest').Config} */
+const config = {
+  coverageProvider: "v8",
+
+  moduleFileExtensions: [
+    "js",
+    "mjs",
+    "cjs",
+    "jsx",
+    "ts",
+    "tsx",
+    "json",
+    "node"
+  ],
+
+  testEnvironment: "jsdom",
 };
+
+const createJestConfig = nextJest({
+  dir: "./",
+});
+
+module.exports = createJestConfig(config);

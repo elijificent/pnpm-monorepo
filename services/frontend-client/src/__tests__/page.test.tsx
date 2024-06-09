@@ -1,5 +1,6 @@
+import React from 'react';
 import { render, screen } from '@testing-library/react';
-import Home from '../src/app/page';
+import Home from '../app/page';
 
 describe('Home', () => {
   it('renders the message from the request object', () => {
